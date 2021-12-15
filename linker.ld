@@ -42,7 +42,9 @@ SECTIONS
     PROVIDE(_bss_end = .);
   } >ram AT>ram :bss
 
-  /DISCARD/ : { *(.eh_frame) }
+  .eh_frame (INFO) : {
+    *(.eh_frame)
+  }
 
   PROVIDE(_memory_start = ORIGIN(ram));
   PROVIDE(_memory_end = ORIGIN(ram) + LENGTH(ram));

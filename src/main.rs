@@ -31,7 +31,7 @@ fn put_c(char: u8) {
 
 fn test1(v: &mut [u8]) {
     for (i, x) in v.iter_mut().enumerate() {
-        *x = *x + i as u8;
+        *x += i as u8;
     }
     test2(&v[..26])
 }
@@ -42,5 +42,3 @@ fn test2(v: &[u8]) {
     }
     put_c(b'\n');
 }
-
-mod test {}

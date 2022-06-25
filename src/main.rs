@@ -1,8 +1,6 @@
 #![no_std]
 #![no_main]
-#![feature(global_asm)]
-
-use core::ptr;
+use core::{arch::global_asm, ptr};
 
 mod panic;
 
